@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Maior Valor</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onclick="MaiorValor()"><strong>verificar</strong></button><br><br>
+    
+</body>
+
+<script>
+    function MaiorValor()
+    {
+        var num01 = parseInt(prompt("Digite o primeiro número"));
+        var num02 = parseInt(prompt("Digite o primeiro número"));
+        if(num02>num01)
+        {
+            alert('O número ' + num02 + ' é maior')
+        } else if (num02<num01)
+        {
+            alert('O número ' + num01 + ' é maior')
+        } else
+        {
+            alert('ambos são iguais')
+        }
+        
+    }
+</script>
+
+</html>
