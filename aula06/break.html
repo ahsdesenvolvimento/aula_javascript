@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Break</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onclick="Break()">Break</button>
+    <button onclick="Break_continue()">Break_continue</button>
+    
+</body>
+<script>
+     function Break_continue()
+    {
+        n_vezes = prompt('digite quantas vezes você quer rodar o sistema')
+
+        for (let i = 1; i <= n_vezes; i++) 
+        {
+            
+            if(i % 3 == 0)
+            {
+                continue
+            }
+            if(i >= 45)
+            {
+                break
+            }
+            console.log('você já rodou o sistema '+ i)
+
+           
+            
+        }
+    }
+
+    function Break()
+    {
+        n_vezes = prompt('digite quantas vezes você quer rodar o sistema')
+
+        for (let i = 1; i <= n_vezes; i++) 
+        {
+            
+            if(i == 3)
+            {
+                continue
+            }
+            console.log('você já rodou o sistema '+ i)
+            if(i==10)
+            {
+                break
+            }
+            
+        }
+               
+      
+    }
+
+       //rodar sistema no maximo 45 vezes e não deve exibir os numeros divisiveis de 3, obrigatorio utilizar o continue e break
+
+</script>
+</html>
