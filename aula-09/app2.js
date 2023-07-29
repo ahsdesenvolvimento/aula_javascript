@@ -4,11 +4,12 @@ const buttonElement = document.getElementById('checkButton');
 const resultadoMensagemElement = document.getElementById('resultMessage');
 var tentativas = 1;
 var sorteado = Math.floor(Math.random() * 100) + 1;
+console.log(sorteado);
 buttonElement.addEventListener('click', 
     function() { 
         var numero = document.getElementById('tentativaInput').value; 
         
-        console.log(sorteado);
+        
         if (numero < 1 || numero > 100){
             tentativas++
             resultadoMensagemElement.classList.add('result-error');
