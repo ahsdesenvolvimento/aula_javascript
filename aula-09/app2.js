@@ -42,7 +42,8 @@ buttonElement.addEventListener('click',
             '<br><br>' +'o número sorteado  ' + sorteado + '  é igual ao número digitado ' + numero + 
             '<br><br>'+'acertou na tentativa número: '+ tentativas;
             tentativas=1;
-        
+            sorteado = Math.floor(Math.random() * 100) + 1;
+            console.log(sorteado);
         }
         
   });
