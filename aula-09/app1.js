@@ -21,7 +21,7 @@ buttonElement.addEventListener('click',
           resultadoMensagemElement.innerHTML = '';
           return; 
         
-    }
+      }
        else if (valor > 10) {   
           resultadoMensagemElement.classList.remove('button-red');  
           resultadoMensagemElement.classList.add('button-green');  
