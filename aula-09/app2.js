@@ -12,6 +12,8 @@ buttonElement.addEventListener('click',
         
         if (numero < 1 || numero > 100){
             tentativas++
+            resultadoMensagemElement.classList.remove('result-fail');
+            resultadoMensagemElement.classList.remove('result-success');
             resultadoMensagemElement.classList.add('result-error');
             resultadoMensagemElement.innerHTML = '<br>'+'<strong> DIGITE UM NÚMERO DE 1 A 100 </strong>'+'<br>'
             
