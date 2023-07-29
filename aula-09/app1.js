@@ -6,13 +6,23 @@ buttonElement.addEventListener('click',
     function() { 
         var valor = document.getElementById('numeroInput').value; 
 
-        if (valor == 10) {
-          alert('O valor digitado é igual a 10');
+        
+        if (valor == '' || isNaN(valor)){
+          alert('O valor digitado não é válido');
           resultadoMensagemElement.classList.remove('button-green');  
           resultadoMensagemElement.classList.remove('button-red');
           resultadoMensagemElement.innerHTML = '';
           return;
-      } else if (valor > 10) {   
+
+      } else if (valor == 10) {   
+          alert('O valor digitado é igual a 10');
+          resultadoMensagemElement.classList.remove('button-green');  
+          resultadoMensagemElement.classList.remove('button-red');
+          resultadoMensagemElement.innerHTML = '';
+          return; 
+        
+    }
+       else if (valor > 10) {   
           resultadoMensagemElement.classList.remove('button-red');  
           resultadoMensagemElement.classList.add('button-green');  
           resultadoMensagemElement.innerHTML = 'O valor  ' + valor + '  é maior que 10!'; 
