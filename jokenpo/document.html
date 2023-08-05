@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+</head>
+<body>
+   <select name="jokenpo" id="jokenpo">
+        <option value="pedra">Pedra</option>
+        <option value="papel">Papel</option>
+        <option value="tesoura">Tesoura</option>
+   </select>
+   <button onclick="Jogar()"><strong>JOGAR</strong></button>
+   <div id="minha_jogada"></div>
+   <div id="maquina_jogada"></div>
+    
+</body>
+    <script>
+        function Jogar()
+        {
+           jogada = document.getElementById('jokenpo').value
+           console.log(jogada)
+
+          // if(jogada=='papel')
+           //{
+          //      img.src= 'papel.png'
+          // }
+         //  else if(jogada != 'papel'&& jogada == pedra)
+          // {
+          //  img.src= 'pedra.png'
+         //  }
+         //  else
+          // img.src = 'tesoura.png'
+          img = document.createElement('img')
+          img.src = jogada + ".png"
+          img.alt = jogada
+           
+          
+           minha_jogada = document.getElementById('minha_jogada')
+           minha_jogada.innerHTML =''
+           minha_jogada.appendChild(img)
+
+           maquina_jogada = Math.floor(Math.random()*3)
+           console.log(maquina_jogada)
+
+            
+           
+           //if(maquina_jogada ==0)
+          // {
+          //  maquina_jogada_descricao ='tesoura'
+          // }
+            jogadas_possiveis = ['pedra','papel','tesoura']
+            console.log(jogadas_possiveis[maquina_jogada])
+            img = document.createElement('img')
+                  
+           maquina_jogada = document.getElementById(jogadas_possiveis)
+           maquina_jogada.appendChild(img)
+            
+
+
+        }
+        
+    </script>
+</html>
