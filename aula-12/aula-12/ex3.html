@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .toggle-paragraph {
+        cursor: pointer;
+    }
+</style>
+
+<head>
+    <title>Alternar Visibilidade</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <p class="toggle-paragraph" id="paragrafo01">Clique para alternar a visibilidade deste parágrafo.</p>
+    <p class="toggle-paragraph" id="paragrafo02">Clique para alternar a visibilidade deste parágrafo.</p>
+    <p class="toggle-paragraph" id="paragrafo03">Clique para alternar a visibilidade deste parágrafo.</p>
+
+</body>
+<script>
+        // Seu código jQuery será colocado aqui
+        $( "#paragrafo01" ).on( "click", function() {
+        $( "#paragrafo01" ).toggle();
+        } );
+
+        $( "#paragrafo02" ).on( "click", function() {
+        $( "#paragrafo02" ).toggle();
+        } );
+
+        $( "#paragrafo03" ).on( "click", function() {
+        $( "#paragrafo03" ).toggle();
+        } );
+       
+</script>
+
+</html>
