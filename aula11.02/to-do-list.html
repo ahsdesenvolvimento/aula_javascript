@@ -4,7 +4,7 @@
 <head>
     <title>To-Do List</title>
     <!-- Link para o jQuery -->
-    <script src="code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,12 +18,50 @@
     <input type="text" id="newTask" placeholder="Digite uma nova tarefa">
     <button id="addTask">Adicionar</button>
     <button id="clearCompleted">Limpar concluídas</button>
-
-
 </body>
 
-<script src="app04.js">
+<script>
+    $(document).ready(function () {
+        // Função para adicionar uma tarefa à lista
+        function addTask(taskText) {
 
+            var taskItem = $("<div></div>").text(taskText);
+            taskItem.addClass("task");
+
+            var doneButton = $("<button>Concluído</button>").click(function () {
+                taskItem.addClass("done");
+            });
+
+            var deleteButton = $("<button>Remover</button>").click(function () {
+                taskItem.remove();
+            });
+
+            taskItem.append(doneButton, deleteButton);
+            $("#taskList").append(taskItem);
+        }
+
+        // Evento ao clicar no botão "Adicionar"
+        $("#addTask").click(function () {
+            var newTaskText = $("#newTask").val().trim();
+            if (newTaskText !== "") {
+                addTask(newTaskText);
+                $("#newTask").val("");
+            }
+        });
+
+        // Evento ao pressionar a tecla "Enter" no campo de texto
+        $("#newTask").keypress(function (event) {
+            console.log(event.which)
+            if (event.which === 13) {
+                $("#addTask").click();
+            }
+        });
+
+        // Evento ao clicar no botão "Limpar concluídas"
+        $("#clearCompleted").click(function () {
+            $(".done").remove();
+        });
+    });
 </script>
 
 </html>
